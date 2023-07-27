@@ -43,7 +43,7 @@ test_installation: install
 	cd Test/test_installation; \
 	rm -rf build && mkdir -p build; \
 	cd build; \
-	cmake -DFMIL_HOME=$(FMIL_REPO_DIR)/$(INSTALL_DIR) -G $(GENERATOR) ..; \
+	cmake -DFMIL_HOME=$(FMIL_REPO_DIR)/$(INSTALL_DIR) -DCMAKE_BUILD_TYPE=Debug -G $(GENERATOR) ..; \
 	cmake --build .; \
 	ctest $(CTEST_FLAGS_COMMON)
 
